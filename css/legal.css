@@ -1,0 +1,222 @@
+/* Legal Pages Styles */
+
+.legal-hero {
+  padding: 120px 0 80px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231a1a1a" width="1200" height="600"/><circle fill="%238B0000" cx="200" cy="150" r="3" opacity="0.3"/><circle fill="%23DC143C" cx="400" cy="200" r="2" opacity="0.4"/><circle fill="%23FFD700" cx="600" cy="100" r="2" opacity="0.2"/><circle fill="%238B0000" cx="800" cy="250" r="3" opacity="0.3"/><circle fill="%23DC143C" cx="1000" cy="180" r="2" opacity="0.4"/></svg>');
+  background-size: cover;
+  background-position: center;
+}
+
+.legal-hero h1 {
+  font-family: "Creepster", cursive;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--accent-gold);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.legal-hero p {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+}
+
+.legal-content {
+  padding: 80px 0;
+  background: var(--dark-bg);
+}
+
+.legal-text {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.legal-text h2 {
+  color: var(--accent-gold);
+  font-size: 2rem;
+  margin: 3rem 0 1.5rem 0;
+  border-bottom: 2px solid var(--primary-red);
+  padding-bottom: 0.5rem;
+}
+
+.legal-text h3 {
+  color: var(--secondary-red);
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.legal-text h4 {
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.legal-text p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.legal-text ul,
+.legal-text ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.legal-text li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.legal-text strong {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.legal-text a {
+  color: var(--secondary-red);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.legal-text a:hover {
+  color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
+}
+
+.legal-text blockquote {
+  border-left: 4px solid var(--primary-red);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--text-gray);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.disclaimer-notice {
+  background: var(--card-bg);
+  border: 2px solid var(--primary-red);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.disclaimer-notice h3 {
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.disclaimer-notice p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.cookie-consent-tool {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.cookie-settings-btn,
+.accept-all-btn,
+.reject-all-btn {
+  background: var(--primary-red);
+  color: var(--text-light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.cookie-settings-btn:hover,
+.accept-all-btn:hover,
+.reject-all-btn:hover {
+  background: var(--secondary-red);
+  transform: translateY(-2px);
+}
+
+.accept-all-btn {
+  background: var(--accent-gold);
+  color: var(--dark-bg);
+}
+
+.reject-all-btn {
+  background: var(--text-gray);
+  color: var(--dark-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .legal-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .legal-text {
+    padding: 0 1rem;
+  }
+
+  .legal-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .legal-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .disclaimer-notice {
+    padding: 1.5rem;
+  }
+
+  .cookie-consent-tool {
+    padding: 1.5rem;
+  }
+
+  .cookie-settings-btn,
+  .accept-all-btn,
+  .reject-all-btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .legal-hero {
+    background: none;
+    color: #000;
+  }
+
+  .legal-content {
+    background: #fff;
+    color: #000;
+  }
+
+  .legal-text {
+    color: #000;
+  }
+
+  .legal-text h2,
+  .legal-text h3,
+  .legal-text h4 {
+    color: #000;
+  }
+
+  .legal-text a {
+    color: #000;
+    text-decoration: underline;
+  }
+}

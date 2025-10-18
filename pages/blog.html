@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FNAF Official Blog - Latest news, game updates, character guides, and horror gaming insights for Five Nights at Freddy's fans."
+    />
+    <meta
+      name="keywords"
+      content="FNAF blog, Five Nights at Freddy's news, horror game updates, Freddy Fazbear, animatronic guides, FNAF community"
+    />
+    <meta name="author" content="FNAF Official" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#8B0000" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="FNAF Official Blog - Latest News & Updates"
+    />
+    <meta
+      property="og:description"
+      content="Stay updated with the latest FNAF news, game guides, character insights, and horror gaming content."
+    />
+    <meta
+      property="og:image"
+      content="https://fnafofficial.com/assets/blog-og-image.jpg"
+    />
+    <meta property="og:url" content="https://fnafofficial.com/blog.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fnafofficial.com/blog.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      FNAF Official Blog - Latest News & Updates | Five Nights at Freddy's
+    </title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo" aria-label="FNAF Official Homepage"
+            >FNAF Official</a
+          >
+          <nav role="navigation" aria-label="Main navigation">
+            <ul class="nav-menu">
+              <li><a href="/">Home</a></li>
+              <li><a href="/pages/games.html">Games</a></li>
+              <li><a href="/pages/blog.html" class="active">Blog</a></li>
+              <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- Blog Hero Section -->
+      <section class="blog-hero" role="banner">
+        <div class="container">
+          <h1>FNAF Official Blog</h1>
+          <p>
+            Stay updated with the latest Five Nights at Freddy's news, game
+            guides, character insights, and horror gaming content.
+          </p>
+        </div>
+      </section>
+
+      <!-- Blog Content -->
+      <section class="blog-content" role="region" aria-labelledby="blog-title">
+        <div class="container">
+          <h2 id="blog-title" class="section-title">Latest Posts</h2>
+
+          <!-- Blog Categories -->
+          <div class="blog-categories">
+            <button class="category-btn active" data-category="all">
+              All Posts
+            </button>
+            <button class="category-btn" data-category="Game Guides">
+              Game Guides
+            </button>
+            <button class="category-btn" data-category="Lore & Story">
+              Lore & Story
+            </button>
+            <button class="category-btn" data-category="Rankings">
+              Rankings
+            </button>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="blog-search">
+            <input
+              type="text"
+              id="blog-search-input"
+              placeholder="Search blog posts..."
+            />
+          </div>
+
+          <!-- Blog Posts Grid -->
+          <div class="blog-posts-grid" id="blog-posts-grid">
+            <!-- Blog posts will be loaded dynamically -->
+          </div>
+
+          <!-- Load More Button -->
+          <div class="load-more-container">
+            <button class="load-more-btn" id="load-more-posts">
+              Load More Posts
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Games</h3>
+            <a href="/#games">FNAF 1</a>
+            <a href="/#games">FNAF 2</a>
+            <a href="/#games">FNAF 3</a>
+            <a href="/#games">FNAF 4</a>
+            <a href="/#games">Sister Location</a>
+            <a href="/#games">Ultimate Custom Night</a>
+          </div>
+          <div class="footer-section">
+            <h3>Blog</h3>
+            <a href="/pages/blog.html">Latest Posts</a>
+            <a href="/pages/blog.html?category=news">News</a>
+            <a href="/pages/blog.html?category=guides">Guides</a>
+            <a href="/pages/blog.html?category=characters">Characters</a>
+            <a href="/pages/blog.html?category=lore">Lore</a>
+          </div>
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <a href="/pages/privacy.html">Privacy Policy</a>
+            <a href="/pages/terms.html">Terms of Service</a>
+            <a href="/pages/cookies.html">Cookie Policy</a>
+            <a href="/pages/disclaimer.html">Disclaimer</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 FNAF Official. All rights reserved. Five Nights at
+            Freddy's is a trademark of Scott Cawthon.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="../script.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/blog.js"></script>
+    <script src="../js/blog-posts.js"></script>
+    <script>
+      // Load blog posts when page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        loadBlogPosts();
+        setupBlogFilters();
+        setupBlogSearch();
+      });
+
+      function loadBlogPosts() {
+        const posts = getAllBlogPosts();
+        const grid = document.getElementById("blog-posts-grid");
+
+        if (!grid) return;
+
+        grid.innerHTML = "";
+
+        posts.forEach((post) => {
+          const postElement = createBlogPostElement(post);
+          grid.appendChild(postElement);
+        });
+      }
+
+      function createBlogPostElement(post) {
+        const article = document.createElement("article");
+        article.className = "blog-post";
+        article.dataset.category = post.category;
+
+        article.innerHTML = `
+          <div class="post-image">
+            <img src="${post.featuredImage}" alt="${
+          post.title
+        }" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="post-placeholder" style="display: none">🎮</div>
+          </div>
+          <div class="post-content">
+            <div class="post-meta">
+              <span class="post-category">${post.category}</span>
+              <span class="post-date">${formatDate(post.publishDate)}</span>
+            </div>
+            <h3 class="post-title">${post.title}</h3>
+            <p class="post-excerpt">${post.description}</p>
+            <a href="../blog-posts/${
+              post.slug
+            }.html" class="read-more">Read More</a>
+          </div>
+        `;
+
+        return article;
+      }
+
+      function setupBlogFilters() {
+        const filterBtns = document.querySelectorAll(".category-btn");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            // Filter posts
+            const category = this.dataset.category;
+            filterPosts(category);
+          });
+        });
+      }
+
+      function filterPosts(category) {
+        const posts = document.querySelectorAll(".blog-post");
+
+        posts.forEach((post) => {
+          if (category === "all" || post.dataset.category === category) {
+            post.style.display = "block";
+          } else {
+            post.style.display = "none";
+          }
+        });
+      }
+
+      function setupBlogSearch() {
+        const searchInput = document.getElementById("blog-search-input");
+
+        if (!searchInput) return;
+
+        searchInput.addEventListener("input", function () {
+          const query = this.value.toLowerCase();
+          const posts = document.querySelectorAll(".blog-post");
+
+          posts.forEach((post) => {
+            const title = post
+              .querySelector(".post-title")
+              .textContent.toLowerCase();
+            const excerpt = post
+              .querySelector(".post-excerpt")
+              .textContent.toLowerCase();
+
+            if (title.includes(query) || excerpt.includes(query)) {
+              post.style.display = "block";
+            } else {
+              post.style.display = "none";
+            }
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

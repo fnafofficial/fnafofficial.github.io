@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - FNAF Official</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://fnafofficial.com/404.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .error-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 2rem;
+      }
+      .error-code {
+        font-size: 8rem;
+        font-family: "Creepster", cursive;
+        color: var(--primary-red);
+        margin-bottom: 1rem;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+      }
+      .error-message {
+        font-size: 1.5rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+      }
+      .error-description {
+        font-size: 1rem;
+        color: var(--text-gray);
+        margin-bottom: 2rem;
+        max-width: 600px;
+      }
+      .error-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .error-btn {
+        background: linear-gradient(
+          45deg,
+          var(--primary-red),
+          var(--secondary-red)
+        );
+        color: var(--text-light);
+        border: none;
+        padding: 12px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+      .error-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(220, 20, 60, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <div class="error-code">404</div>
+      <h1 class="error-message">Page Not Found</h1>
+      <p class="error-description">
+        The page you're looking for doesn't exist. It might have been moved,
+        deleted, or you entered the wrong URL.
+      </p>
+      <div class="error-actions">
+        <a href="/" class="error-btn">Go Home</a>
+        <a href="/pages/games.html" class="error-btn">Play Games</a>
+        <a href="/pages/contact.html" class="error-btn">Contact Us</a>
+      </div>
+    </div>
+  </body>
+</html>

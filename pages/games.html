@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Play all Five Nights at Freddy's games online for free. Complete collection of FNAF games including FNAF 1, 2, 3, 4, Ultimate Custom Night, and FNAF Hack Edition."
+    />
+    <meta
+      name="keywords"
+      content="FNAF games, Five Nights at Freddy's, horror games, survival games, FNAF 1, FNAF 2, FNAF 3, FNAF 4, Ultimate Custom Night, FNAF Hack"
+    />
+    <meta name="author" content="FNAF Official" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#8B0000" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="FNAF Games Collection - Play All Five Nights at Freddy's Games"
+    />
+    <meta
+      property="og:description"
+      content="Complete collection of Five Nights at Freddy's games. Play FNAF 1, 2, 3, 4, Ultimate Custom Night, and FNAF Hack Edition online for free."
+    />
+    <meta
+      property="og:image"
+      content="https://fnafofficial.com/assets/games-og-image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://fnafofficial.com/pages/games.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FNAF Official" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fnafofficial.com/pages/games.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      FNAF Games Collection - Play All Five Nights at Freddy's Games | FNAF
+      Official
+    </title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/games.css" />
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo" aria-label="FNAF Official Homepage"
+            >FNAF Official</a
+          >
+          <nav role="navigation" aria-label="Main navigation">
+            <ul class="nav-menu">
+              <li><a href="/">Home</a></li>
+              <li><a href="/pages/games.html" class="active">Games</a></li>
+              <li><a href="/pages/blog.html">Blog</a></li>
+              <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- Games Hero Section -->
+      <section class="games-hero" role="banner">
+        <div class="container">
+          <h1>All Games Collection</h1>
+          <p>
+            Discover our complete collection of horror and survival games. From
+            FNAF classics to other terrifying adventures.
+          </p>
+        </div>
+      </section>
+
+      <!-- All Games Section -->
+      <section
+        class="all-games-section"
+        role="region"
+        aria-labelledby="all-games-title"
+      >
+        <div class="container">
+          <h2 id="all-games-title" class="section-title">All Games</h2>
+          <div class="games-grid" id="games-grid">
+            <!-- Games will be loaded dynamically -->
+          </div>
+          <!-- Load More button removed - all games display at once -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Games</h3>
+            <a href="/pages/games.html">FNAF 1</a>
+            <a href="/pages/games.html">FNAF 2</a>
+            <a href="/pages/games.html">FNAF 3</a>
+            <a href="/pages/games.html">FNAF 4</a>
+            <a href="/pages/games.html">Ultimate Custom Night</a>
+            <a href="/pages/games.html">FNAF Hack</a>
+          </div>
+          <div class="footer-section">
+            <h3>Support</h3>
+            <a href="/pages/contact.html">Contact Us</a>
+            <a href="/pages/contact.html">Help Center</a>
+            <a href="/pages/contact.html">Bug Reports</a>
+            <a href="/pages/contact.html">Feedback</a>
+          </div>
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <a href="/pages/privacy.html">Privacy Policy</a>
+            <a href="/pages/terms.html">Terms of Service</a>
+            <a href="/pages/cookies.html">Cookie Policy</a>
+            <a href="/pages/disclaimer.html">Disclaimer</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 FNAF Official. All rights reserved. Five Nights at
+            Freddy's is a trademark of Scott Cawthon.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/games.js"></script>
+
+    <!-- Initialize Games -->
+    <script>
+      // Wait for page to load
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("🎮 Initializing games...");
+
+        // Add FNAF games
+        addFNAFGames();
+
+        // Add other games
+        addOtherGames();
+
+        console.log("✅ All games loaded!");
+      });
+    </script>
+  </body>
+</html>

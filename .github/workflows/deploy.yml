@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: |
+          npm install -g html-minifier-terser
+          npm install -g clean-css-cli
+          npm install -g terser
+
+      - name: Minify HTML
+        run: |
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o index.html index.html
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/blog.html pages/blog.html
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/about.html pages/about.html
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/contact.html pages/contact.html
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/privacy.html pages/privacy.html
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/terms.html pages/terms.html
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/cookies.html pages/cookies.html
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/disclaimer.html pages/disclaimer.html
+
+      - name: Minify CSS
+        run: |
+          cleancss -o styles.css styles.css
+          cleancss -o css/blog.css css/blog.css
+          cleancss -o css/contact.css css/contact.css
+          cleancss -o css/legal.css css/legal.css
+
+      - name: Minify JS
+        run: |
+          terser script.js -o script.js -c -m
+          terser js/menu.js -o js/menu.js -c -m
+          terser js/blog.js -o js/blog.js -c -m
+          terser js/contact.js -o js/contact.js -c -m
+          terser js/cookies.js -o js/cookies.js -c -m
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

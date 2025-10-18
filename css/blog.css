@@ -1,0 +1,720 @@
+/* ========================================
+   BLOG STYLES - SEO OPTIMIZED
+   ======================================== */
+
+/* ========================================
+   BLOG HERO SECTION
+   ======================================== */
+.blog-hero {
+  background: #1a1a1a;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.blog-hero h1 {
+  font-family: "Creepster", cursive;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.blog-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   BLOG CONTENT SECTION
+   ======================================== */
+.blog-content {
+  padding: 4rem 0;
+  background: #1a1a1a;
+}
+
+.section-title {
+  text-align: center;
+  font-family: "Creepster", cursive;
+  font-size: 2.5rem;
+  color: #8b0000;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   BLOG CATEGORIES & SEARCH
+   ======================================== */
+.blog-categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background: white;
+  border: 2px solid #ddd;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+}
+
+.category-btn:hover {
+  border-color: #8b0000;
+  color: #8b0000;
+}
+
+.category-btn.active {
+  background: #8b0000;
+  border-color: #8b0000;
+  color: white;
+}
+
+.blog-search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.blog-search input {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.blog-search input:focus {
+  outline: none;
+  border-color: #8b0000;
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+}
+
+/* ========================================
+   BLOG POSTS GRID
+   ======================================== */
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.blog-post {
+  background: #2d2d2d;
+  border-radius: 12px;
+  border: 1px solid #444;
+}
+
+.blog-post.featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #8b0000 0%, #a52a2a 100%);
+  color: white;
+}
+
+.blog-post.featured .post-title {
+  color: white;
+}
+
+.blog-post.featured .post-excerpt {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========================================
+   POST IMAGE
+   ======================================== */
+.post-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.blog-post.featured .post-image {
+  height: 250px;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-post:hover .post-image img {
+  transform: scale(1.05);
+}
+
+.post-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #8b0000, #a52a2a);
+  color: white;
+}
+
+/* ========================================
+   POST CONTENT
+   ======================================== */
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.post-category {
+  background: #8b0000;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.post-date {
+  color: #999;
+}
+
+.post-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: #ddd;
+}
+
+.post-excerpt {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-more {
+  display: inline-block;
+  background: #8b0000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.read-more:hover {
+  background: #a52a2a;
+}
+
+/* ========================================
+   LOAD MORE BUTTON
+   ======================================== */
+.load-more-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.load-more-btn {
+  background: #8b0000;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.load-more-btn:hover {
+  background: #a52a2a;
+}
+
+/* ========================================
+   BLOG POST PAGE STYLES
+   ======================================== */
+.blog-post-header {
+  padding: 2rem 0;
+  background: #f8f9fa;
+}
+
+.breadcrumb {
+  margin-bottom: 2rem;
+}
+
+.breadcrumb ol {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li {
+  color: #666;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "›";
+  margin-left: 0.5rem;
+  color: #999;
+}
+
+.breadcrumb a {
+  color: #8b0000;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   INDIVIDUAL BLOG POST
+   ======================================== */
+.blog-post {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-family: "Creepster", cursive;
+  font-size: 2.5rem;
+  color: #8b0000;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.post-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  flex-wrap: wrap;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f0f0f0;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.post-featured-image {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.post-featured-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.post-content {
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.post-content h2 {
+  color: #8b0000;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 700;
+}
+
+.post-content h3 {
+  color: #a52a2a;
+  font-size: 1.4rem;
+  margin: 1.5rem 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content strong {
+  color: #8b0000;
+  font-weight: 700;
+}
+
+/* ========================================
+   POST FOOTER
+   ======================================== */
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.post-share h3 {
+  color: #8b0000;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.share-buttons a {
+  background: #8b0000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.share-buttons a:hover {
+  background: #a52a2a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3);
+}
+
+/* ========================================
+   RELATED POSTS
+   ======================================== */
+.related-posts {
+  background: #f8f9fa;
+  padding: 3rem 0;
+  margin-top: 3rem;
+}
+
+.related-posts h2 {
+  text-align: center;
+  color: #8b0000;
+  font-family: "Creepster", cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.related-post-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.related-post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.related-post-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.related-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-post-content {
+  padding: 1.5rem;
+}
+
+.related-post-content h3 {
+  margin-bottom: 0.75rem;
+}
+
+.related-post-content h3 a {
+  color: #8b0000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.related-post-content h3 a:hover {
+  text-decoration: underline;
+}
+
+.related-post-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.related-post-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  .blog-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .blog-hero p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .blog-posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .blog-post.featured {
+    grid-column: span 1;
+  }
+
+  .blog-categories {
+    gap: 0.5rem;
+  }
+
+  .category-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+  }
+
+  .post-content {
+    font-size: 1rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .share-buttons {
+    flex-direction: column;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-hero {
+    padding: 2rem 0;
+  }
+
+  .blog-hero h1 {
+    font-size: 2rem;
+  }
+
+  .blog-content {
+    padding: 2rem 0;
+  }
+
+  .blog-posts-grid {
+    gap: 1rem;
+  }
+
+  .post-content {
+    padding: 1rem;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+  }
+
+  .post-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .post-tags {
+    gap: 0.25rem;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY & SEO
+   ======================================== */
+.blog-post:focus-within {
+  outline: 2px solid #8b0000;
+  outline-offset: 2px;
+}
+
+.read-more:focus,
+.category-btn:focus,
+.load-more-btn:focus {
+  outline: 2px solid #8b0000;
+  outline-offset: 2px;
+}
+
+/* Print styles for better SEO */
+@media print {
+  .blog-hero,
+  .blog-categories,
+  .blog-search,
+  .load-more-container,
+  .post-footer,
+  .related-posts {
+    display: none;
+  }
+
+  .blog-post {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .post-title {
+    color: #000;
+  }
+
+  .post-content {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION
+   ======================================== */
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: 2rem 0;
+  }
+
+  .blog-hero h1 {
+    font-size: 2rem;
+  }
+
+  .blog-hero p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .blog-posts-grid {
+    padding: 0 1rem;
+  }
+
+  .blog-categories {
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .category-btn {
+    min-width: 80px;
+    text-align: center;
+  }
+
+  .blog-search {
+    padding: 0 1rem;
+  }
+
+  .blog-search input {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .post-title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .post-content {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .load-more-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
