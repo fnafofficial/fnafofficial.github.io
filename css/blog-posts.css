@@ -2,13 +2,18 @@
    BLOG POSTS - SIMPLE & CLEAN
    ======================================== */
 
+/* Body background for blog posts */
+body {
+  background: #f8f9fa;
+}
+
 /* ========================================
    BLOG POST HEADER
    ======================================== */
 .blog-post-header {
-  background: #1a1a1a;
+  background: #f8f9fa;
   padding: 6rem 0 2rem 0;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #ddd;
   position: relative;
   z-index: 1;
   margin-top: 80px;
@@ -28,7 +33,7 @@
 }
 
 .breadcrumb li {
-  color: #ccc;
+  color: #666;
 }
 
 .breadcrumb li:not(:last-child)::after {
@@ -51,19 +56,20 @@
    BLOG POST STYLING
    ======================================== */
 .blog-post {
-  background: #2d2d2d;
+  background: #ffffff;
   border-radius: 8px;
   padding: 0;
   margin-bottom: 2rem;
-  border: 1px solid #444;
+  border: 1px solid #ddd;
   overflow: visible;
   min-height: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .post-header {
   padding: 2rem;
-  border-bottom: 1px solid #444;
-  background: #2d2d2d;
+  border-bottom: 1px solid #ddd;
+  background: #ffffff;
   overflow: visible;
 }
 
@@ -80,12 +86,12 @@
   gap: 1rem;
   margin-bottom: 1rem;
   font-size: 0.9rem;
-  color: #ccc;
+  color: #666;
   flex-wrap: wrap;
 }
 
 .post-meta time {
-  color: #999;
+  color: #888;
 }
 
 .post-category {
@@ -110,25 +116,25 @@
 }
 
 .tag {
-  background: #444;
-  color: #ccc;
+  background: #f0f0f0;
+  color: #666;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid #555;
+  border: 1px solid #ddd;
 }
 
 /* ========================================
    TABLE OF CONTENTS
    ======================================== */
 .table-of-contents {
-  background: #333;
+  background: #f8f9fa;
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 8px;
   border-left: 4px solid #8b0000;
-  border: 1px solid #444;
+  border: 1px solid #ddd;
 }
 
 .table-of-contents h3 {
@@ -149,7 +155,7 @@
 }
 
 .table-of-contents a {
-  color: #ccc;
+  color: #666;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -180,9 +186,9 @@
 .post-content {
   padding: 2rem;
   line-height: 1.7;
-  color: #ddd;
-  font-size: 1rem;
-  background: #2d2d2d;
+  color: #333;
+  font-size: 1.1rem; /* Increased from 1rem for better readability */
+  background: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
   min-height: 200px;
@@ -191,10 +197,10 @@
 
 .post-content h2 {
   color: #8b0000;
-  font-size: 1.6rem;
+  font-size: 1.8rem; /* Increased from 1.6rem for better hierarchy */
   margin: 2rem 0 1.5rem 0;
   font-weight: 600;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #ddd;
   padding-bottom: 0.5rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
@@ -202,7 +208,7 @@
 
 .post-content h3 {
   color: #a52a2a;
-  font-size: 1.3rem;
+  font-size: 1.4rem; /* Increased from 1.3rem for better hierarchy */
   margin: 1.5rem 0 0.75rem 0;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -211,7 +217,7 @@
 
 .post-content h4 {
   color: #8b0000;
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* Increased from 1.1rem for better hierarchy */
   margin: 1.25rem 0 0.5rem 0;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -250,13 +256,13 @@
   padding-left: 1rem;
   margin: 1.5rem 0;
   font-style: italic;
-  color: #ccc;
+  color: #666;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
-  background: #333;
+  background: #f8f9fa;
   padding: 1rem;
   border-radius: 0 4px 4px 0;
-  border: 1px solid #444;
+  border: 1px solid #ddd;
 }
 
 .post-content img {
@@ -277,9 +283,9 @@
    POST FOOTER
    ======================================== */
 .post-footer {
-  background: #333;
+  background: #f8f9fa;
   padding: 1.5rem 2rem;
-  border-top: 1px solid #444;
+  border-top: 1px solid #ddd;
 }
 
 .post-share h3 {
@@ -313,7 +319,7 @@
    RELATED POSTS
    ======================================== */
 .related-posts {
-  background: #1a1a1a;
+  background: #f8f9fa;
   padding: 2rem 0;
   margin-top: 0;
 }
@@ -335,9 +341,10 @@
 }
 
 .related-post-card {
-  background: #2d2d2d;
+  background: #ffffff;
   border-radius: 8px;
-  border: 1px solid #444;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .related-post-image {
@@ -371,7 +378,7 @@
 }
 
 .related-post-content p {
-  color: #ccc;
+  color: #666;
   line-height: 1.5;
   margin-bottom: 0.75rem;
   font-size: 0.9rem;
@@ -381,7 +388,7 @@
   display: flex;
   gap: 0.75rem;
   font-size: 0.8rem;
-  color: #999;
+  color: #888;
   flex-wrap: wrap;
 }
 
@@ -595,17 +602,17 @@
 
   .post-content {
     padding: 1rem 0.75rem 1.5rem 0.75rem;
-    font-size: 0.85rem;
+    font-size: 1rem; /* Increased from 0.85rem for better mobile readability */
     min-height: 120px;
   }
 
   .post-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Increased from 1.2rem for better mobile hierarchy */
     margin: 1.25rem 0 0.75rem 0;
   }
 
   .post-content h3 {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Increased from 1rem for better mobile hierarchy */
     margin: 1rem 0 0.75rem 0;
   }
 
