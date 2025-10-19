@@ -6,7 +6,6 @@
   --text-light: #ffffff;
   --text-gray: #cccccc;
   --accent-gold: #ffd700;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Performance optimizations */
@@ -25,7 +24,8 @@ body {
 }
 
 body {
-  font-family: "Orbitron", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
   color: var(--text-light);
   line-height: 1.6;
@@ -136,6 +136,8 @@ header {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
 }
 
 .cta-button {
@@ -498,6 +500,8 @@ footer {
   .hero p {
     font-size: 1rem;
     padding: 0 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, sans-serif;
   }
 
   .cta-button {
@@ -557,6 +561,8 @@ footer {
 
   .hero p {
     font-size: 0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, sans-serif;
   }
 
   .games-grid {
@@ -618,29 +624,6 @@ footer {
   display: none;
 }
 
-/* Mobile menu toggle positioning */
-@media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: block;
-    order: 2;
-    margin-left: auto;
-    background: rgba(45, 45, 45, 0.8);
-    border: 1px solid rgba(139, 0, 0, 0.3);
-    border-radius: 4px;
-    padding: 0.5rem;
-    min-width: 44px;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mobile-menu-toggle:hover {
-    background: rgba(220, 20, 60, 0.2);
-    border-color: var(--secondary-red);
-  }
-}
-
 /* Desktop Navigation - Show normal menu */
 @media (min-width: 769px) {
   .nav-menu {
@@ -655,10 +638,6 @@ footer {
     opacity: 1;
     visibility: visible;
     transition: none;
-  }
-
-  .nav-menu li {
-    margin: 0;
   }
 
   .nav-menu a {

@@ -500,54 +500,5 @@
     <!-- External JavaScript -->
     <script src="script.js"></script>
     <script src="js/menu.js"></script>
-
-    <!-- Mobile Menu JavaScript - Optimized -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
-        const navMenu = document.querySelector(".nav-menu");
-        const body = document.body;
-
-        if (!mobileMenuToggle || !navMenu) return;
-
-        let isMenuOpen = false;
-
-        // Simple toggle function
-        function toggleMenu() {
-          isMenuOpen = !isMenuOpen;
-
-          if (isMenuOpen) {
-            navMenu.classList.add("active");
-            mobileMenuToggle.innerHTML = "✕";
-            body.style.overflow = "hidden";
-          } else {
-            navMenu.classList.remove("active");
-            mobileMenuToggle.innerHTML = "☰";
-            body.style.overflow = "";
-          }
-        }
-
-        // Single click handler
-        mobileMenuToggle.addEventListener("click", toggleMenu);
-
-        // Close on link click
-        navMenu.addEventListener("click", function (e) {
-          if (e.target.tagName === "A") {
-            toggleMenu();
-          }
-        });
-
-        // Close on outside click
-        document.addEventListener("click", function (e) {
-          if (
-            isMenuOpen &&
-            !navMenu.contains(e.target) &&
-            !mobileMenuToggle.contains(e.target)
-          ) {
-            toggleMenu();
-          }
-        });
-      });
-    </script>
   </body>
 </html>
