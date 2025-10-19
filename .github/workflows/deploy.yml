@@ -25,31 +25,26 @@ jobs:
           npm install -g clean-css-cli
           npm install -g terser
 
-      - name: Minify HTML
+      - name: Minify HTML (ignore missing files)
         run: |
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o index.html index.html
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/blog.html pages/blog.html
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/about.html pages/about.html
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/contact.html pages/contact.html
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/privacy.html pages/privacy.html
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/terms.html pages/terms.html
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/cookies.html pages/cookies.html
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o pages/disclaimer.html pages/disclaimer.html
+          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o index.html index.html || true
+          for file in pages/*.html; do
+            [ -e "$file" ] && html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o "$file" "$file" || true
+          done
 
-      - name: Minify CSS
+      - name: Minify CSS (ignore missing files)
         run: |
-          cleancss -o styles.css styles.css
-          cleancss -o css/blog.css css/blog.css
-          cleancss -o css/contact.css css/contact.css
-          cleancss -o css/legal.css css/legal.css
+          cleancss -o styles.css styles.css || true
+          for file in css/*.css; do
+            [ -e "$file" ] && cleancss -o "$file" "$file" || true
+          done
 
-      - name: Minify JS
+      - name: Minify JS (ignore missing files)
         run: |
-          terser script.js -o script.js -c -m
-          terser js/menu.js -o js/menu.js -c -m
-          terser js/blog.js -o js/blog.js -c -m
-          terser js/contact.js -o js/contact.js -c -m
-          terser js/cookies.js -o js/cookies.js -c -m
+          terser script.js -o script.js -c -m || true
+          for file in js/*.js; do
+            [ -e "$file" ] && terser "$file" -o "$file" -c -m || true
+          done
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
