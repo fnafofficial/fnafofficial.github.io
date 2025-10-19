@@ -3,21 +3,24 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
+          cache: "npm"
 
       - name: Install dependencies
         run: |
@@ -25,30 +28,63 @@ jobs:
           npm install -g clean-css-cli
           npm install -g terser
 
-      - name: Minify HTML (ignore missing files)
+      - name: Minify HTML
         run: |
-          html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o index.html index.html || true
+          # Minify main HTML files
+          if [ -f "index.html" ]; then
+            html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o index.html index.html
+          fi
+
+          # Minify pages HTML files
           for file in pages/*.html; do
-            [ -e "$file" ] && html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o "$file" "$file" || true
+            if [ -f "$file" ]; then
+              html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o "$file" "$file"
+            fi
           done
 
-      - name: Minify CSS (ignore missing files)
+          # Minify blog posts HTML files
+          for file in blog-posts/*.html; do
+            if [ -f "$file" ]; then
+              html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o "$file" "$file"
+            fi
+          done
+
+      - name: Minify CSS
         run: |
-          cleancss -o styles.css styles.css || true
+          # Minify main CSS file
+          if [ -f "styles.css" ]; then
+            cleancss -o styles.css styles.css
+          fi
+
+          # Minify CSS files in css directory
           for file in css/*.css; do
-            [ -e "$file" ] && cleancss -o "$file" "$file" || true
+            if [ -f "$file" ]; then
+              cleancss -o "$file" "$file"
+            fi
           done
 
-      - name: Minify JS (ignore missing files)
+      - name: Minify JS
         run: |
-          terser script.js -o script.js -c -m || true
+          # Minify main JS file
+          if [ -f "script.js" ]; then
+            terser script.js -o script.js -c -m
+          fi
+
+          # Minify JS files in js directory
           for file in js/*.js; do
-            [ -e "$file" ] && terser "$file" -o "$file" -c -m || true
+            if [ -f "$file" ]; then
+              terser "$file" -o "$file" -c -m
+            fi
           done
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+        id: deployment
+        uses: actions/deploy-pages@v4
