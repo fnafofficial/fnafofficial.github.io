@@ -101,12 +101,13 @@ header {
 
 /* Hero Section */
 .hero {
-  padding: 120px 0 80px;
+  padding: 140px 0 100px;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231a1a1a" width="1200" height="600"/><circle fill="%238B0000" cx="200" cy="150" r="3" opacity="0.3"/><circle fill="%23DC143C" cx="400" cy="200" r="2" opacity="0.4"/><circle fill="%23FFD700" cx="600" cy="100" r="2" opacity="0.2"/><circle fill="%238B0000" cx="800" cy="250" r="3" opacity="0.3"/><circle fill="%23DC143C" cx="1000" cy="180" r="2" opacity="0.4"/></svg>');
   background-size: cover;
   background-position: center;
+  margin-top: 20px;
 }
 
 .hero h1 {
@@ -360,52 +361,127 @@ footer {
    RESPONSIVE DESIGN - MOBILE FIRST
    ======================================== */
 
-/* Mobile Navigation */
+/* Mobile Navigation - Hamburger Menu */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
+    position: relative;
+    min-height: 70px;
   }
 
   .logo {
     font-size: 1.5rem;
     flex-shrink: 0;
+    z-index: 1001;
   }
 
+  /* Hamburger Menu Button - Right aligned */
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    position: relative;
+    margin-left: auto;
+    order: 2;
+  }
+
+  .mobile-menu-toggle:hover {
+    color: var(--secondary-red);
+  }
+
+  /* Hide desktop menu on mobile */
   .nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.active {
     display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-menu li {
-    flex: 0 0 auto;
+    margin: 0;
   }
 
   .nav-menu a {
     display: block;
-    padding: 0.4rem 0.6rem;
-    font-size: 0.85rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    white-space: nowrap;
     background: rgba(45, 45, 45, 0.8);
-    border: 1px solid rgba(139, 0, 0, 0.3);
+    border: 2px solid rgba(139, 0, 0, 0.3);
+    min-width: 200px;
+    color: var(--text-light);
   }
 
   .nav-menu a:hover {
-    background: rgba(220, 20, 60, 0.2);
+    background: rgba(220, 20, 60, 0.3);
     border-color: var(--secondary-red);
+    transform: scale(1.05);
   }
 
-  /* Hero adjustments */
+  /* Ensure content is not covered by menu */
   .hero {
-    padding: 100px 0 60px;
+    padding: 120px 0 80px;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  /* Main content spacing */
+  main {
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+  }
+
+  /* Add extra spacing for all sections */
+  .games-section {
+    padding: 100px 0 80px;
+  }
+
+  .features-section {
+    padding: 100px 0 80px;
+  }
+
+  /* Header z-index fix */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+  }
+
+  /* Ensure hamburger button is above menu */
+  .mobile-menu-toggle {
+    z-index: 1002;
   }
 
   .hero h1 {
@@ -451,33 +527,22 @@ footer {
 /* Small Mobile (320px - 480px) */
 @media (max-width: 480px) {
   .header-content {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.25rem 0;
+    padding: 0.8rem 0;
+    min-height: 60px;
   }
 
   .logo {
     font-size: 1.25rem;
-    text-align: center;
   }
 
-  .nav-menu {
-    gap: 0.4rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .nav-menu a {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.8rem;
-    min-width: 60px;
-    flex: 1;
-    max-width: 80px;
+  .mobile-menu-toggle {
+    font-size: 1.2rem;
+    padding: 0.4rem;
   }
 
   .hero {
-    padding: 80px 0 40px;
+    padding: 100px 0 60px;
+    margin-top: 15px;
   }
 
   .hero h1 {
@@ -512,12 +577,25 @@ footer {
 
 /* Tablet (768px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .header-content {
+    padding: 0.75rem 0;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
   .nav-menu {
     gap: 1.5rem;
+    flex-wrap: nowrap;
   }
 
   .nav-menu a {
     font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+    min-width: auto;
+    max-width: none;
   }
 
   .hero h1 {
@@ -526,6 +604,97 @@ footer {
 
   .games-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Hide mobile menu toggle on desktop */
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* Mobile menu toggle positioning */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+    order: 2;
+    margin-left: auto;
+    background: rgba(45, 45, 45, 0.8);
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 0.5rem;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu-toggle:hover {
+    background: rgba(220, 20, 60, 0.2);
+    border-color: var(--secondary-red);
+  }
+}
+
+/* Desktop Navigation - Show normal menu */
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    backdrop-filter: none;
+    opacity: 1;
+    visibility: visible;
+    transition: none;
+  }
+
+  .nav-menu li {
+    margin: 0;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    min-width: auto;
+    color: var(--text-light);
+  }
+
+  .nav-menu a:hover {
+    color: var(--secondary-red);
+    background: none;
+    border: none;
+    transform: none;
+  }
+}
+
+/* Extra small screens (320px - 360px) */
+@media (max-width: 360px) {
+  .header-content {
+    padding: 0.6rem 0;
+    min-height: 55px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .mobile-menu-toggle {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+
+  .hero {
+    padding: 90px 0 50px;
+    margin-top: 10px;
   }
 }
 
