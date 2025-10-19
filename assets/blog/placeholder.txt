@@ -1,0 +1,20 @@
+# Blog Images Placeholder
+
+This folder contains placeholder images for blog posts.
+
+## Required Images:
+- fnaf1-office.jpg - FNAF 1 Security Office screenshot
+- fnaf1-animatronics.jpg - FNAF 1 Animatronics group image
+- fnaf1-guide-featured.jpg - Featured image for FNAF 1 guide
+- fnaf-lore-featured.jpg - Featured image for FNAF lore post
+- animatronics-ranked-featured.jpg - Featured image for animatronics ranking
+
+## Image Specifications:
+- Format: JPG or PNG
+- Size: 800x400px (2:1 ratio) for featured images
+- Size: 800x600px (4:3 ratio) for content images
+- Quality: High resolution for web
+- Alt text: Descriptive and SEO-friendly
+
+## Usage:
+Replace these placeholder files with actual images when available.

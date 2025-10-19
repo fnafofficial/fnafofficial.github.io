@@ -1,0 +1,31 @@
+<svg width="200" height="120" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="text3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="120" fill="url(#bg3)" rx="10"/>
+  
+  <!-- FNAF 3 Text -->
+  <text x="100" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" 
+        text-anchor="middle" fill="url(#text3)">FNAF 3</text>
+  
+  <!-- Springtrap Icon -->
+  <circle cx="100" cy="80" r="15" fill="#8B4513"/>
+  <circle cx="95" cy="75" r="2" fill="#FF0000"/>
+  <circle cx="105" cy="75" r="2" fill="#FF0000"/>
+  <ellipse cx="100" cy="85" rx="3" ry="2" fill="#000"/>
+  <!-- Springtrap has green eyes -->
+  <circle cx="95" cy="75" r="1" fill="#00FF00"/>
+  <circle cx="105" cy="75" r="1" fill="#00FF00"/>
+  
+  <!-- Border -->
+  <rect width="200" height="120" fill="none" stroke="#FFD700" stroke-width="2" rx="10"/>
+</svg>
