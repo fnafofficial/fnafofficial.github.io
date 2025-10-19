@@ -23,29 +23,26 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: |
-          npm install -g html-minifier-terser
-          npm install -g clean-css-cli
-          npm install -g terser
+        run: npm install
 
       - name: Minify HTML
         run: |
           # Minify main HTML files
           if [ -f "index.html" ]; then
-            html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o index.html index.html
+            npx html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o index.html index.html
           fi
 
           # Minify pages HTML files
           for file in pages/*.html; do
             if [ -f "$file" ]; then
-              html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o "$file" "$file"
+              npx html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o "$file" "$file"
             fi
           done
 
           # Minify blog posts HTML files
           for file in blog-posts/*.html; do
             if [ -f "$file" ]; then
-              html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o "$file" "$file"
+              npx html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o "$file" "$file"
             fi
           done
 
@@ -53,13 +50,13 @@ jobs:
         run: |
           # Minify main CSS file
           if [ -f "styles.css" ]; then
-            cleancss -o styles.css styles.css
+            npx cleancss -o styles.css styles.css
           fi
 
           # Minify CSS files in css directory
           for file in css/*.css; do
             if [ -f "$file" ]; then
-              cleancss -o "$file" "$file"
+              npx cleancss -o "$file" "$file"
             fi
           done
 
@@ -67,13 +64,13 @@ jobs:
         run: |
           # Minify main JS file
           if [ -f "script.js" ]; then
-            terser script.js -o script.js -c -m
+            npx terser script.js -o script.js -c -m
           fi
 
           # Minify JS files in js directory
           for file in js/*.js; do
             if [ -f "$file" ]; then
-              terser "$file" -o "$file" -c -m
+              npx terser "$file" -o "$file" -c -m
             fi
           done
 

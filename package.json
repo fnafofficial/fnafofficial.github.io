@@ -1,0 +1,31 @@
+{
+  "name": "fnafofficial.github.io",
+  "version": "1.0.0",
+  "description": "FNAF Official Website - Five Nights at Freddy's Games",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "deploy": "echo 'Deploy handled by GitHub Actions'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fnafofficial/fnafofficial.github.io.git"
+  },
+  "keywords": [
+    "fnaf",
+    "five-nights-at-freddys",
+    "horror-games",
+    "freddy-fazbear",
+    "animatronic"
+  ],
+  "author": "FNAF Official",
+  "license": "MIT",
+  "devDependencies": {
+    "html-minifier-terser": "^7.2.0",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.19.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
