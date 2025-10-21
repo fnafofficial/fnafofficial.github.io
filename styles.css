@@ -2,10 +2,12 @@
   --primary-red: #dc143c;
   --secondary-red: #dc143c;
   --dark-bg: #1a1a1a;
-  --card-bg: #2d2d2d;
+  --card-bg: #1f1f1f;
   --text-light: #ffffff;
-  --text-gray: #e0e0e0;
-  --accent-gold: #ffed4e;
+  --text-gray: #f5f5f5;
+  --accent-gold: #ffd700;
+  --font-primary: "Creepster", cursive, "Arial Black", Arial, sans-serif;
+  --font-secondary: "Orbitron", monospace, "Courier New", monospace;
 }
 
 /* Performance optimizations */
