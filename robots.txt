@@ -3,19 +3,21 @@ Allow: /
 
 # Disallow crawling of game files and assets
 Disallow: /games/
-Disallow: /other-games/
 Disallow: /assets/
 Disallow: /css/
 Disallow: /js/
 Disallow: /*.json$
 Disallow: /*.xml$
 Disallow: /*.txt$
+Disallow: /*.md$
 
 # Allow important pages
-Allow: /pages/
+Allow: /blog/
 Allow: /index.html
 Allow: /sitemap.xml
 Allow: /robots.txt
+Allow: /site.webmanifest
+Allow: /browserconfig.xml
 
 # Crawl delay for better server performance
 Crawl-delay: 1
@@ -23,5 +25,21 @@ Crawl-delay: 1
 # Disallow admin or private areas (if any)
 Disallow: /admin/
 Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
+# Sitemap location
 Sitemap: https://fnafofficial.com/sitemap.xml
+
+# Additional directives for better SEO
+# Allow Google to access CSS and JS for rendering
+User-agent: Googlebot
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Allow Bing to access CSS and JS for rendering  
+User-agent: Bingbot
+Allow: /css/
+Allow: /js/
+Allow: /assets/
