@@ -26,6 +26,39 @@ img {
   display: block;
 }
 
+/* Size reservation for critical elements */
+.hero h1 {
+  min-height: 4rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  min-height: 3rem;
+  line-height: 1.5;
+}
+
+.game-image {
+  min-height: 200px;
+  aspect-ratio: 16/9;
+}
+
+.blog-preview-card {
+  min-height: 200px;
+}
+
+/* Prevent font loading shifts */
+@font-face {
+  font-family: "Creepster";
+  font-display: block;
+  src: local("Arial Black");
+}
+
+@font-face {
+  font-family: "Orbitron";
+  font-display: block;
+  src: local("Courier New");
+}
+
 /* Font loading optimization - handled by Google Fonts */
 
 body {
@@ -364,25 +397,28 @@ header {
 }
 
 .blog-preview-card h3 {
-  color: var(--primary-red);
+  color: #ff4444;
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .blog-preview-card p {
   color: #ffffff;
   margin-bottom: 1.5rem;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .read-more-link {
   color: #ffd700;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .read-more-link:hover {

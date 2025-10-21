@@ -87,20 +87,23 @@ class MenuManager {
 
     // Use requestAnimationFrame to batch DOM updates
     requestAnimationFrame(() => {
-      const navMenu = document.querySelector(".nav-menu");
-      const toggleButton = document.querySelector(".mobile-menu-toggle");
-      const body = document.body;
+      // Batch all DOM queries to avoid forced reflow
+      const elements = {
+        navMenu: document.querySelector(".nav-menu"),
+        toggleButton: document.querySelector(".mobile-menu-toggle"),
+        body: document.body,
+      };
 
       if (this.mobileMenuOpen) {
-        navMenu.classList.add("active");
-        toggleButton.innerHTML = "✕";
-        toggleButton.setAttribute("aria-expanded", "true");
-        body.style.overflow = "hidden";
+        elements.navMenu.classList.add("active");
+        elements.toggleButton.innerHTML = "✕";
+        elements.toggleButton.setAttribute("aria-expanded", "true");
+        elements.body.style.overflow = "hidden";
       } else {
-        navMenu.classList.remove("active");
-        toggleButton.innerHTML = "☰";
-        toggleButton.setAttribute("aria-expanded", "false");
-        body.style.overflow = "";
+        elements.navMenu.classList.remove("active");
+        elements.toggleButton.innerHTML = "☰";
+        elements.toggleButton.setAttribute("aria-expanded", "false");
+        elements.body.style.overflow = "";
       }
     });
   }
@@ -163,7 +166,9 @@ class MenuManager {
         // Use getBoundingClientRect for better performance
         const header = document.querySelector("header");
         if (header) {
-          cachedHeaderHeight = header.getBoundingClientRect().height;
+          // Batch DOM reads to avoid forced reflow
+          const rect = header.getBoundingClientRect();
+          cachedHeaderHeight = rect.height;
         }
       }
       return cachedHeaderHeight;

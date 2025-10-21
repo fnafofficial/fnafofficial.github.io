@@ -437,8 +437,14 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../js/menu.js"></script>
-    <script src="../js/blog-posts.js"></script>
+    <script
+      src="../js/menu.js"
+      onerror="console.warn('Menu script failed to load')"
+    ></script>
+    <script
+      src="../js/blog-posts.js"
+      onerror="console.warn('Blog posts script failed to load')"
+    ></script>
     <script>
       // Load related posts when page loads
       document.addEventListener("DOMContentLoaded", function () {
