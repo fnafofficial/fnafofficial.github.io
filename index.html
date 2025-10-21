@@ -201,6 +201,11 @@
         font-display: swap;
         min-height: 4rem;
         line-height: 1.2;
+        /* Prevent layout shift from font loading */
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        /* Reserve space for font metrics */
+        contain: layout;
       }
       .hero p {
         color: #e0e0e0;
@@ -209,6 +214,9 @@
         font-display: swap;
         min-height: 3rem;
         line-height: 1.5;
+        /* Prevent layout shift from text rendering */
+        contain: layout;
+        will-change: auto;
       }
       .container {
         max-width: 1200px;

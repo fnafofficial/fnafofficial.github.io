@@ -30,20 +30,37 @@ img {
 .hero h1 {
   min-height: 4rem;
   line-height: 1.2;
+  contain: layout;
+  will-change: auto;
 }
 
 .hero p {
   min-height: 3rem;
   line-height: 1.5;
+  contain: layout;
+  will-change: auto;
 }
 
 .game-image {
   min-height: 200px;
   aspect-ratio: 16/9;
+  contain: layout;
+  will-change: auto;
 }
 
 .blog-preview-card {
   min-height: 200px;
+  contain: layout;
+  will-change: auto;
+}
+
+/* Prevent layout shifts from dynamic content */
+.games-grid {
+  contain: layout;
+}
+
+.blog-preview-grid {
+  contain: layout;
 }
 
 /* Prevent font loading shifts */
@@ -257,6 +274,9 @@ header {
   color: var(--text-light);
   position: relative;
   overflow: hidden;
+  /* Prevent layout shift from image loading */
+  contain: layout;
+  will-change: auto;
 }
 
 .game-image img {
