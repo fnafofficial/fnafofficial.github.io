@@ -671,14 +671,15 @@ header {
 
 .breadcrumb-item:not(:last-child)::after {
   content: "›";
-  color: black;
+  color: white;
   font-weight: bold;
   margin-left: 0.5rem;
   font-weight: bold;
 }
 
 .breadcrumb-item a {
-  color: var(--accent-gold);
+  color: white;
+  font-weight: bold;
   text-decoration: none;
   display: flex;
   align-items: center;

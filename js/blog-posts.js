@@ -18,8 +18,8 @@ VÍ DỤ THÊM BLOG POST MỚI:
   keywords: "fnaf, horror, games",
   category: "Game Reviews",
   tags: ["FNAF", "Horror", "Review"],
-  publishDate: "2024-01-15",
-  modifiedDate: "2024-01-15",
+  publishDate: "2025-01-15",
+  modifiedDate: "2025-01-15",
   featuredImage: "../assets/blog/new-post-featured.jpg",
   content: "Post content here...",
   canonicalUrl: "https://fnafofficial.com/blog-posts/new-post.html"
@@ -37,8 +37,8 @@ const BLOG_POSTS = [
       "fnaf 1, five nights at freddy's, survival guide, freddy fazbear, animatronic, horror game, tips, strategies",
     category: "Game Guides",
     tags: ["FNAF 1", "Survival Guide", "Tips", "Strategy", "Horror"],
-    publishDate: "2024-01-15",
-    modifiedDate: "2024-01-15",
+    publishDate: "2025-01-15",
+    modifiedDate: "2025-01-15",
     featuredImage: "../assets/blog/fnaf1-guide-featured.jpg",
     content: `
       <h2>Introduction to FNAF 1</h2>
@@ -109,8 +109,8 @@ const BLOG_POSTS = [
       "fnaf lore, five nights at freddy's story, william afton, bite of 87, fnaf timeline, animatronic lore",
     category: "Lore & Story",
     tags: ["FNAF Lore", "Story", "Timeline", "William Afton", "Mystery"],
-    publishDate: "2024-01-10",
-    modifiedDate: "2024-01-10",
+    publishDate: "2025-01-10",
+    modifiedDate: "2025-01-10",
     featuredImage: "../assets/blog/fnaf-lore-featured.jpg",
     content: `
       <h2>The Beginning: Fredbear's Family Diner</h2>
@@ -171,8 +171,8 @@ const BLOG_POSTS = [
       "fnaf animatronics, scariest animatronics, fnaf ranking, freddy fazbear, nightmare animatronics, horror ranking",
     category: "Rankings",
     tags: ["Animatronics", "Ranking", "Scary", "Horror", "FNAF"],
-    publishDate: "2024-01-05",
-    modifiedDate: "2024-01-05",
+    publishDate: "2025-01-05",
+    modifiedDate: "2025-01-05",
     featuredImage: "../assets/blog/animatronics-ranked-featured.jpg",
     content: `
       <h2>Ranking Criteria</h2>

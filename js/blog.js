@@ -185,7 +185,7 @@ class BlogManager {
         title:
           "Welcome to FNAF Official - The Ultimate Horror Gaming Experience",
         category: "news",
-        date: "January 15, 2024",
+        date: "October 15, 2025",
         author: "FNAF Official Team",
         content: `
           <p>Welcome to FNAF Official, your ultimate destination for Five Nights at Freddy's games and content. We're thrilled to bring you the complete collection of FNAF games, all playable online for free.</p>
@@ -203,7 +203,7 @@ class BlogManager {
       "ultimate-fnaf-survival-guide": {
         title: "Ultimate FNAF Survival Guide: Tips to Survive the Night",
         category: "guides",
-        date: "January 12, 2024",
+        date: "October 12, 2025",
         author: "FNAF Expert",
         content: `
           <p>Surviving in Five Nights at Freddy's requires strategy, quick reflexes, and nerves of steel. Here's your comprehensive guide to making it through the night.</p>
