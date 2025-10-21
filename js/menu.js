@@ -160,7 +160,11 @@ class MenuManager {
     let cachedHeaderHeight = null;
     const getHeaderHeight = () => {
       if (cachedHeaderHeight === null) {
-        cachedHeaderHeight = document.querySelector("header").offsetHeight;
+        // Use getBoundingClientRect for better performance
+        const header = document.querySelector("header");
+        if (header) {
+          cachedHeaderHeight = header.getBoundingClientRect().height;
+        }
       }
       return cachedHeaderHeight;
     };
