@@ -105,9 +105,10 @@
 
           <nav role="navigation" aria-label="Main navigation">
             <ul class="nav-menu">
-              <li><a href="../pages/games.html">Games</a></li>
-              <li><a href="../pages/blog.html">Blog</a></li>
-              <li><a href="../pages/contact.html">Contact</a></li>
+              <li><a href="../fnaf-unblocked.html">Fnaf Unblocked Games</a></li>
+              <li><a href="../blog.html">Fnaf Blog</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../contact.html">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -116,17 +117,33 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
+      <!-- Breadcrumb Navigation -->
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+              <a href="../" aria-label="Home">
+                <span class="breadcrumb-icon">🏠</span>
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="../blog.html">
+                <span class="breadcrumb-icon">📝</span>
+                Fnaf Blog
+              </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <span class="breadcrumb-icon">📄</span>
+              Blog Post
+            </li>
+          </ol>
+        </div>
+      </nav>
+
       <!-- Blog Post Header -->
       <section class="blog-post-header">
         <div class="container">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
-              <li><a href="../">Home</a></li>
-              <li><a href="../pages/blog.html">Blog</a></li>
-              <li aria-current="page">{{TITLE}}</li>
-            </ol>
-          </nav>
-
           <article
             class="blog-post"
             itemscope
@@ -134,16 +151,6 @@
           >
             <header class="post-header">
               <h1 class="post-title" itemprop="headline">{{TITLE}}</h1>
-              <div class="post-meta">
-                <time datetime="{{PUBLISH_DATE}}" itemprop="datePublished"
-                  >{{PUBLISH_DATE_FORMATTED}}</time
-                >
-                <span class="post-category" itemprop="articleSection"
-                  >{{CATEGORY}}</span
-                >
-                <span class="post-author" itemprop="author">FNAF Official</span>
-              </div>
-              <div class="post-tags">{{TAGS_HTML}}</div>
             </header>
 
             <div class="post-featured-image">
@@ -153,6 +160,20 @@
             <div class="post-content" itemprop="articleBody">{{CONTENT}}</div>
 
             <footer class="post-footer">
+              <div class="post-meta-wrapper">
+                <div class="post-meta">
+                  <time datetime="{{PUBLISH_DATE}}" itemprop="datePublished"
+                    >{{PUBLISH_DATE_FORMATTED}}</time
+                  >
+                  <span class="post-category" itemprop="articleSection"
+                    >{{CATEGORY}}</span
+                  >
+                  <span class="post-author" itemprop="author"
+                    >FNAF Official</span
+                  >
+                </div>
+                <div class="post-tags">{{TAGS_HTML}}</div>
+              </div>
               <div class="post-share">
                 <h3>Share this post:</h3>
                 <div class="share-buttons">
@@ -206,18 +227,19 @@
           <div class="footer-section">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="../pages/games.html">Games</a></li>
-              <li><a href="../pages/blog.html">Blog</a></li>
-              <li><a href="../pages/contact.html">Contact</a></li>
+              <li><a href="../fnaf-unblocked.html">Fnaf Unblocked Games</a></li>
+              <li><a href="../blog.html">Fnaf Blog</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-section">
             <h3>Legal</h3>
             <ul>
-              <li><a href="../pages/privacy.html">Privacy Policy</a></li>
-              <li><a href="../pages/terms.html">Terms of Service</a></li>
-              <li><a href="../pages/cookies.html">Cookie Policy</a></li>
-              <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
+              <li><a href="../privacy.html">Privacy Policy</a></li>
+              <li><a href="../terms.html">Terms of Service</a></li>
+              <li><a href="../cookies.html">Cookie Policy</a></li>
+              <li><a href="../disclaimer.html">Disclaimer</a></li>
             </ul>
           </div>
         </div>

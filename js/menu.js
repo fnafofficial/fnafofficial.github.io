@@ -134,10 +134,12 @@ class MenuManager {
   // Check if menu item should be active
   isActiveMenuItem(href) {
     if (href === "#games" && this.currentPage === "home") return true;
-    if (href === "/pages/contact.html" && this.currentPage === "contact")
-      return true;
-    if (href === "/pages/blog.html" && this.currentPage === "blog") return true;
-    if (href === "/pages/blog.html" && this.currentPage.startsWith("blog-"))
+    if (href === "/contact.html" && this.currentPage === "contact") return true;
+    if (href === "/blog.html" && this.currentPage === "blog") return true;
+    if (
+      href === "/blog-posts/fnaf-1-complete-guide.html" &&
+      this.currentPage.startsWith("blog-")
+    )
       return true;
     return false;
   }
@@ -242,7 +244,7 @@ class MenuManager {
     if (page === "home") {
       window.location.href = "/";
     } else {
-      window.location.href = `/pages/${page}.html`;
+      window.location.href = `/${page}.html`;
     }
   }
 
@@ -255,18 +257,23 @@ class MenuManager {
         icon: "🏠",
       },
       games: {
-        title: "Games",
-        href: "/pages/games.html",
+        title: "Fnaf Unblocked Games",
+        href: "/fnaf-unblocked.html",
         icon: "🎮",
       },
       blog: {
-        title: "Blog",
-        href: "/pages/blog.html",
+        title: "Fnaf Blog",
+        href: "/blog.html",
         icon: "📝",
+      },
+      about: {
+        title: "About",
+        href: "/about.html",
+        icon: "ℹ️",
       },
       contact: {
         title: "Contact",
-        href: "/pages/contact.html",
+        href: "/contact.html",
         icon: "📞",
       },
     };

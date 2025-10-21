@@ -9,7 +9,7 @@
     />
     <meta
       name="keywords"
-      content="FNAF blog, Five Nights at Freddy's news, horror game updates, Freddy Fazbear, animatronic guides, FNAF community"
+      content="Fnaf Blog, Five Nights at Freddy's news, horror game updates, Freddy Fazbear, animatronic guides, FNAF community"
     />
     <meta name="author" content="FNAF Official" />
     <meta name="robots" content="index, follow" />
@@ -56,8 +56,8 @@
     </title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/blog.css" />
   </head>
   <body>
     <!-- Skip to main content for accessibility -->
@@ -82,9 +82,10 @@
           <nav role="navigation" aria-label="Main navigation">
             <ul class="nav-menu">
               <li><a href="/">Home</a></li>
-              <li><a href="/pages/games.html">Games</a></li>
-              <li><a href="/pages/blog.html" class="active">Blog</a></li>
-              <li><a href="/pages/contact.html">Contact</a></li>
+              <li><a href="/fnaf-unblocked.html">Fnaf Unblocked Games</a></li>
+              <li><a href="/blog.html" class="active">Fnaf Blog</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -93,6 +94,24 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
+      <!-- Breadcrumb Navigation -->
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+              <a href="/" aria-label="Home">
+                <span class="breadcrumb-icon">🏠</span>
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <span class="breadcrumb-icon">📝</span>
+              Fnaf Blog
+            </li>
+          </ol>
+        </div>
+      </nav>
+
       <!-- Blog Hero Section -->
       <section class="blog-hero" role="banner">
         <div class="container">
@@ -164,18 +183,18 @@
           </div>
           <div class="footer-section">
             <h3>Blog</h3>
-            <a href="/pages/blog.html">Latest Posts</a>
-            <a href="/pages/blog.html?category=news">News</a>
-            <a href="/pages/blog.html?category=guides">Guides</a>
-            <a href="/pages/blog.html?category=characters">Characters</a>
-            <a href="/pages/blog.html?category=lore">Lore</a>
+            <a href="/blog.html">Latest Posts</a>
+            <a href="/blog.html?category=news">News</a>
+            <a href="/blog.html?category=guides">Guides</a>
+            <a href="/blog.html?category=characters">Characters</a>
+            <a href="/blog.html?category=lore">Lore</a>
           </div>
           <div class="footer-section">
             <h3>Legal</h3>
-            <a href="/pages/privacy.html">Privacy Policy</a>
-            <a href="/pages/terms.html">Terms of Service</a>
-            <a href="/pages/cookies.html">Cookie Policy</a>
-            <a href="/pages/disclaimer.html">Disclaimer</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/cookies.html">Cookie Policy</a>
+            <a href="/disclaimer.html">Disclaimer</a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -188,10 +207,10 @@
     </footer>
 
     <!-- External JavaScript -->
-    <script src="../script.js"></script>
-    <script src="../js/menu.js"></script>
-    <script src="../js/blog.js"></script>
-    <script src="../js/blog-posts.js"></script>
+    <script src="script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/blog-posts.js"></script>
 
     <script>
       // Load blog posts when page loads
@@ -234,9 +253,7 @@
             </div>
             <h3 class="post-title">${post.title}</h3>
             <p class="post-excerpt">${post.description}</p>
-            <a href="../blog-posts/${
-              post.slug
-            }.html" class="read-more">Read More</a>
+            <a href="blog/${post.slug}.html" class="read-more">Read More</a>
           </div>
         `;
 
