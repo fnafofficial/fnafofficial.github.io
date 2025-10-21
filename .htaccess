@@ -28,7 +28,7 @@
     ExpiresByType image/gif "access plus 1 month"
     ExpiresByType image/png "access plus 1 month"
     ExpiresByType image/svg+xml "access plus 1 month"
-    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 year"
     
     # CSS and JavaScript
     ExpiresByType text/css "access plus 1 month"
@@ -71,6 +71,7 @@
     AddOutputFilterByType DEFLATE font/ttf
     AddOutputFilterByType DEFLATE image/svg+xml
     AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE image/webp
     AddOutputFilterByType DEFLATE text/css
     AddOutputFilterByType DEFLATE text/html
     AddOutputFilterByType DEFLATE text/javascript

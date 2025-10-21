@@ -21,7 +21,7 @@
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="theme-color" content="#8B0000" />
+    <meta name="theme-color" content="#dc143c" />
     <link rel="canonical" href="https://fnafofficial.com" />
 
     <!-- Open Graph & Twitter Cards -->
@@ -71,13 +71,29 @@
     <link rel="apple-touch-icon" href="/logo.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Fonts -->
+    <!-- Fonts - Optimized -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@400;700;900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.gstatic.com/s/creepster/v13/AIZy_zVUq....woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@400;700;900&display=swap"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet"
+    /></noscript>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -141,8 +157,76 @@
       }
     </script>
 
+    <!-- Critical CSS inline -->
+    <style>
+      /* Critical above-the-fold styles */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #1a1a1a;
+        color: #fff;
+      }
+      .header {
+        background: #1a1a1a;
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .hero {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        padding: 8rem 0 4rem;
+        text-align: center;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero h1 {
+        color: #dc143c;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-family: "Creepster", cursive, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, sans-serif;
+        font-display: swap;
+      }
+      .hero p {
+        color: #e0e0e0;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        font-display: swap;
+        will-change: transform;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      .nav-menu {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+      .nav-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preload"
+      href="styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
   </head>
   <body>
     <!-- Skip to main content for accessibility -->
@@ -543,7 +627,7 @@
     </footer>
 
     <!-- External JavaScript -->
-    <script src="script.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="script.js" defer></script>
+    <script src="js/menu.js" defer></script>
   </body>
 </html>

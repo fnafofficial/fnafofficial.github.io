@@ -20,42 +20,42 @@ const GAMES = [
     id: "fnaf1",
     title: "FNAF 1",
     folder: "fnaf1",
-    logo: "../games/fnaf1/logo.png",
+    logo: "../games/fnaf1/logo.webp",
     type: "fnaf",
   },
   {
     id: "fnaf2",
     title: "FNAF 2",
     folder: "fnaf2",
-    logo: "../games/fnaf2/logo.png",
+    logo: "../games/fnaf2/logo.webp",
     type: "fnaf",
   },
   {
     id: "fnaf3",
     title: "FNAF 3",
     folder: "fnaf3",
-    logo: "../games/fnaf3/logo.png",
+    logo: "../games/fnaf3/logo.webp",
     type: "fnaf",
   },
   {
     id: "fnaf4",
     title: "FNAF 4",
     folder: "fnaf4",
-    logo: "../games/fnaf4/logo.png",
+    logo: "../games/fnaf4/logo.webp",
     type: "fnaf",
   },
   {
     id: "ucn",
     title: "UCN",
     folder: "fnaf-ucn",
-    logo: "../games/fnaf-ucn/logo.png",
+    logo: "../games/fnaf-ucn/logo.webp",
     type: "fnaf",
   },
   {
     id: "hack",
     title: "FNAF Hack",
     folder: "fnaf-hack",
-    logo: "../games/fnaf-hack/logo.png",
+    logo: "../games/fnaf-hack/logo.webp",
     type: "fnaf",
   },
 ];
@@ -108,6 +108,8 @@ function createGameCard(game) {
       <img 
         src="${game.logo}" 
         alt="${game.title} Logo" 
+        loading="lazy"
+        decoding="async"
         onerror="this.style.display='none';"
       />
     </div>

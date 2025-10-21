@@ -1,11 +1,11 @@
 :root {
-  --primary-red: #8b0000;
+  --primary-red: #dc143c;
   --secondary-red: #dc143c;
   --dark-bg: #1a1a1a;
   --card-bg: #2d2d2d;
   --text-light: #ffffff;
-  --text-gray: #cccccc;
-  --accent-gold: #ffd700;
+  --text-gray: #e0e0e0;
+  --accent-gold: #ffed4e;
 }
 
 /* Performance optimizations */
