@@ -149,15 +149,19 @@
             itemscope
             itemtype="https://schema.org/BlogPosting"
           >
-            <header class="post-header">
+            <div class="post-content" itemprop="articleBody">
               <h1 class="post-title" itemprop="headline">{{TITLE}}</h1>
-            </header>
 
-            <div class="post-featured-image">
-              <img src="{{FEATURED_IMAGE}}" alt="{{TITLE}}" itemprop="image" />
+              <div class="post-featured-image">
+                <img
+                  src="{{FEATURED_IMAGE}}"
+                  alt="{{TITLE}}"
+                  itemprop="image"
+                />
+              </div>
+
+              {{CONTENT}}
             </div>
-
-            <div class="post-content" itemprop="articleBody">{{CONTENT}}</div>
 
             <footer class="post-footer">
               <div class="post-meta-wrapper">

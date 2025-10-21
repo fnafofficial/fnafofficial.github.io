@@ -47,7 +47,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 0rem 0;
   border-bottom: 2px solid var(--primary-red);
 }
 
@@ -645,10 +645,10 @@ header {
 
 /* Breadcrumb Navigation */
 .breadcrumb {
-  background: var(--card-bg);
+  background: transparent;
   padding: 1rem 0;
-  border-bottom: 1px solid #444;
-  margin-top: 85px; /* Reduced to be closer to menu */
+  border-bottom: none;
+  margin-top: 50px; /* Reduced to be closer to menu */
   position: relative;
   z-index: 10;
 }
@@ -671,7 +671,8 @@ header {
 
 .breadcrumb-item:not(:last-child)::after {
   content: "›";
-  color: var(--text-gray);
+  color: black;
+  font-weight: bold;
   margin-left: 0.5rem;
   font-weight: bold;
 }
