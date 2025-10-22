@@ -14,7 +14,7 @@
     <!-- Essential Meta Tags -->
     <meta
       name="description"
-      content="🕹️ Play FNAF horror games online – Five Nights at Freddy’s 1, 2, 3, 4 & more. Survive the horror with Freddy Fazbear and friends"
+      content="🕹️ Play FNAF horror games online free – Five Nights at Freddy's 1, 2, 3, 4, Ultimate Custom Night & FNAF Hack. Survive the horror with Freddy Fazbear and friends. No download required, play instantly in browser. Complete FNAF collection with all animatronics, jump scares, and survival challenges."
     />
     <meta
       name="keywords"
@@ -35,7 +35,7 @@
     />
     <meta
       property="og:description"
-      content="🕹️ Play FNAF horror games online – Five Nights at Freddy’s 1, 2, 3, 4 & more. Survive the horror with Freddy Fazbear and friends"
+      content="🕹️ Play FNAF horror games online free – Five Nights at Freddy's 1, 2, 3, 4, Ultimate Custom Night & FNAF Hack. Survive the horror with Freddy Fazbear and friends. No download required, play instantly in browser."
     />
     <meta
       property="og:image"
@@ -51,7 +51,7 @@
     />
     <meta
       name="twitter:description"
-      content="🕹️ Play FNAF horror games online – Five Nights at Freddy’s 1, 2, 3, 4 & more. Survive the horror with Freddy Fazbear and friends"
+      content="🕹️ Play FNAF horror games online free – Five Nights at Freddy's 1, 2, 3, 4, Ultimate Custom Night & FNAF Hack. Survive the horror with Freddy Fazbear and friends. No download required, play instantly in browser."
     />
     <meta
       name="twitter:image"
@@ -346,7 +346,12 @@
           </h2>
           <div class="games-grid">
             <!-- FNAF 1 -->
-            <article class="game-card" role="article">
+            <article
+              class="game-card h-entry"
+              role="article"
+              itemscope
+              itemtype="https://schema.org/VideoGame"
+            >
               <div class="game-image">
                 <img
                   src="games/fnaf1/logo.webp"
@@ -356,7 +361,7 @@
                 <div class="game-placeholder" style="display: none">🎭</div>
               </div>
               <div class="game-content">
-                <h3 class="game-title">
+                <h3 class="game-title p-name" itemprop="name">
                   Five Nights at Freddy's 1 - Original Horror Game
                 </h3>
                 <p class="game-description">
@@ -643,39 +648,57 @@
             FNAF Game Guides & Tips
           </h2>
           <div class="blog-preview-grid">
-            <article class="blog-preview-card">
-              <h3>FNAF 1 Complete Survival Guide</h3>
-              <p>
+            <article
+              class="blog-preview-card h-entry"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <h3 class="p-name" itemprop="headline">
+                FNAF 1 Complete Survival Guide
+              </h3>
+              <p class="p-summary" itemprop="description">
                 Learn how to survive every night in the original Five Nights at
                 Freddy's game. This guide covers power-saving tricks, camera
                 tactics, and expert strategies to beat Freddy and his
                 animatronic crew.
               </p>
-              <a href="/blog.html" class="read-more-link"
+              <a href="/blog.html" class="read-more-link u-url" itemprop="url"
                 >Read Full FNAF 1 Guide</a
               >
             </article>
 
-            <article class="blog-preview-card">
-              <h3>FNAF Lore Explained</h3>
-              <p>
+            <article
+              class="blog-preview-card h-entry"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <h3 class="p-name" itemprop="headline">FNAF Lore Explained</h3>
+              <p class="p-summary" itemprop="description">
                 Dive deep into the story behind the FNAF universe — from the
                 Purple Guy to hidden minigames and secret endings. Understand
                 how each Five Nights at Freddy's game connects in the full lore
                 timeline.
               </p>
-              <a href="/blog.html" class="read-more-link">Explore FNAF Lore</a>
+              <a href="/blog.html" class="read-more-link u-url" itemprop="url"
+                >Explore FNAF Lore</a
+              >
             </article>
 
-            <article class="blog-preview-card">
-              <h3>FNAF Animatronics Ranked</h3>
-              <p>
-                Who’s the scariest animatronic in FNAF history? We rank every
+            <article
+              class="blog-preview-card h-entry"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <h3 class="p-name" itemprop="headline">
+                FNAF Animatronics Ranked
+              </h3>
+              <p class="p-summary" itemprop="description">
+                Who's the scariest animatronic in FNAF history? We rank every
                 character from Freddy, Bonnie, Chica, and Foxy to the newest
                 nightmare versions — complete with gameplay insights and fear
                 factor ratings.
               </p>
-              <a href="/blog.html" class="read-more-link"
+              <a href="/blog.html" class="read-more-link u-url" itemprop="url"
                 >See Animatronic Rankings</a
               >
             </article>
