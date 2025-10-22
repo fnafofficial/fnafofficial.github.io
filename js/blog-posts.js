@@ -37,8 +37,8 @@ const BLOG_POSTS = [
       "FNAF 1, Five Nights at Freddy's 1, Night 1 FNAF, FNAF 1 guide, FNAF 1 tips, FNAF 1 walkthrough, FNAF 1 strategy, FNAF 1 animatronics, FNAF 1 survival",
     category: "Game Guides",
     tags: ["FNAF 1", "Night 1", "Strategy", "Survival Guide", "Tips"],
-    publishDate: "2025-01-15",
-    modifiedDate: "2025-01-15",
+    publishDate: "2025-10-22",
+    modifiedDate: "2025-10-22",
     featuredImage: "/blog/fnaf-1-night-1/FNaF1-Night1Screen.webp",
     content:
       "Night 1 in FNAF 1 is your introduction to the horror that awaits. While it's the easiest night, it's crucial to learn the basic mechanics and animatronic behavior patterns.",
@@ -55,8 +55,8 @@ const BLOG_POSTS = [
       "FNAF 1 Night 2, Five Nights at Freddy's 1 Night 2, FNAF 1 Night 2 strategy, FNAF 1 Night 2 guide, FNAF 1 Night 2 tips, Foxy FNAF 1, FNAF 1 survival guide, FNAF 1 walkthrough",
     category: "Game Guides",
     tags: ["FNAF 1", "Night 2", "Foxy", "Strategy", "Power Management"],
-    publishDate: "2025-01-15",
-    modifiedDate: "2025-01-15",
+    publishDate: "2025-10-22",
+    modifiedDate: "2025-10-22",
     featuredImage: "/blog/fnaf-1-night-2/Golden_Freddy_Death.webp",
     content:
       "Night 2 FNaF 1 marks the real beginning of tension in Five Nights at Freddy's. The animatronics become faster, Foxy finally joins the game, and power management starts to matter more than ever.",
@@ -79,8 +79,8 @@ const BLOG_POSTS = [
       "Strategy",
       "Power Management",
     ],
-    publishDate: "2025-01-15",
-    modifiedDate: "2025-01-15",
+    publishDate: "2025-10-22",
+    modifiedDate: "2025-10-22",
     featuredImage: "/blog/fnaf-1-night-3/590.webp",
     content:
       "Night 3 FNaF 1 marks a major difficulty spike in Five Nights at Freddy's. This is the night Freddy Fazbear himself becomes active — and once he starts moving, the tension skyrockets.",

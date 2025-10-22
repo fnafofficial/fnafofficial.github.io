@@ -10,8 +10,16 @@ A modern, SEO-optimized website for Five Nights at Freddy's games collection, de
 - **FNAF 2**: New animatronics and mechanics
 - **FNAF 3**: Fazbear's Fright horror attraction
 - **FNAF 4**: Nightmare from a child's perspective
-- **Sister Location**: Circus Baby's Entertainment
-- **Ultimate Custom Night**: 50+ animatronics
+- **FNAF UCN**: Ultimate Custom Night with 50+ animatronics
+- **FNAF Hack**: Modified versions and fan games
+
+### 📝 Blog System
+
+- **FNAF 1 Night 1 Guide**: Complete walkthrough and strategies
+- **FNAF 1 Night 2 Guide**: Foxy introduction and power management
+- **FNAF 1 Night 3 Guide**: Freddy joins the hunt survival tips
+- **SEO Optimized**: Each blog post has comprehensive meta tags
+- **Responsive Design**: Mobile-friendly blog layout
 
 ### 🔍 SEO Optimization
 
@@ -28,6 +36,8 @@ A modern, SEO-optimized website for Five Nights at Freddy's games collection, de
 - **Accessibility**: ARIA labels, skip links, and keyboard navigation
 - **PWA Ready**: Web App Manifest for installable experience
 - **Core Web Vitals**: Optimized for Google's ranking factors
+- **Blog System**: Dynamic blog post loading with SEO optimization
+- **Content Management**: Easy blog post addition via JavaScript configuration
 
 ### 🎨 Design
 
@@ -52,6 +62,10 @@ A modern, SEO-optimized website for Five Nights at Freddy's games collection, de
 - FNAF horror games collection
 - Freddy Fazbear animatronic games
 - Free online horror survival games
+- FNAF 1 Night 1 guide walkthrough
+- FNAF 1 Night 2 strategy tips
+- FNAF 1 Night 3 survival guide
+- Five Nights at Freddy's complete guide
 
 ## Technical SEO Features
 

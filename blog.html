@@ -295,6 +295,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         console.log("DOM loaded, loading blog posts...");
         try {
+          // Load all blog posts from files
           loadBlogPosts();
           setupBlogFilters();
           setupBlogSearch();
