@@ -78,8 +78,8 @@
         "blogPost": [
           {
             "@type": "BlogPosting",
-            "headline": "Five Nights at Freddy's 1: Complete Survival Guide",
-            "url": "https://fnafofficial.com/blog/fnaf-1-complete-guide.html",
+            "headline": "FNAF 1 Night 1 Complete Survival Guide",
+            "url": "https://fnafofficial.com/blog/fnaf-1-night-1.html",
             "datePublished": "2025-01-15",
             "dateModified": "2025-01-15",
             "author": {
@@ -93,8 +93,8 @@
           },
           {
             "@type": "BlogPosting",
-            "headline": "FNAF Lore Explained: The Complete Story Timeline",
-            "url": "https://fnafofficial.com/blog/fnaf-lore-explained.html",
+            "headline": "FNAF 1 Night 2 Complete Survival Guide",
+            "url": "https://fnafofficial.com/blog/fnaf-1-night-2.html",
             "datePublished": "2025-01-15",
             "dateModified": "2025-01-15",
             "author": {
@@ -108,8 +108,8 @@
           },
           {
             "@type": "BlogPosting",
-            "headline": "FNAF Animatronics Ranked: From Scariest to Most Dangerous",
-            "url": "https://fnafofficial.com/blog/fnaf-animatronics-ranked.html",
+            "headline": "FNAF 1 Night 3 Complete Survival Guide",
+            "url": "https://fnafofficial.com/blog/fnaf-1-night-3.html",
             "datePublished": "2025-01-15",
             "dateModified": "2025-01-15",
             "author": {
@@ -210,11 +210,9 @@
             <button class="category-btn" data-category="Game Guides">
               Game Guides
             </button>
-            <button class="category-btn" data-category="Lore & Story">
-              Lore & Story
-            </button>
-            <button class="category-btn" data-category="Rankings">
-              Rankings
+            <button class="category-btn" data-category="FNAF 1">FNAF 1</button>
+            <button class="category-btn" data-category="Strategy">
+              Strategy
             </button>
           </div>
 
@@ -230,6 +228,12 @@
           <!-- Blog Posts Grid -->
           <div class="blog-posts-grid" id="blog-posts-grid">
             <!-- Blog posts will be loaded dynamically -->
+            <div
+              id="loading-message"
+              style="text-align: center; padding: 2rem; color: #e8e8e8"
+            >
+              Loading blog posts...
+            </div>
           </div>
 
           <!-- Load More Button -->
@@ -281,30 +285,66 @@
     </footer>
 
     <!-- External JavaScript -->
-    <script src="script.js"></script>
+    <script src="js/blog-posts.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/blog.js"></script>
-    <script src="js/blog-posts.js"></script>
+    <script src="script.js"></script>
 
     <script>
       // Load blog posts when page loads
       document.addEventListener("DOMContentLoaded", function () {
-        loadBlogPosts();
-        setupBlogFilters();
-        setupBlogSearch();
+        console.log("DOM loaded, loading blog posts...");
+        try {
+          loadBlogPosts();
+          setupBlogFilters();
+          setupBlogSearch();
+        } catch (error) {
+          console.error("Error loading blog posts:", error);
+        }
       });
 
       function loadBlogPosts() {
-        const posts = getAllBlogPosts();
-        const grid = document.getElementById("blog-posts-grid");
+        console.log("Loading blog posts...");
 
-        if (!grid) return;
+        // Check if getAllBlogPosts function exists
+        if (typeof getAllBlogPosts !== "function") {
+          console.error("getAllBlogPosts function not found!");
+          return;
+        }
+
+        const posts = getAllBlogPosts();
+        console.log("Posts found:", posts.length);
+        const grid = document.getElementById("blog-posts-grid");
+        console.log("Grid element:", grid);
+
+        if (!grid) {
+          console.error("Blog posts grid not found!");
+          return;
+        }
+
+        // Remove loading message
+        const loadingMessage = document.getElementById("loading-message");
+        if (loadingMessage) {
+          loadingMessage.remove();
+        }
 
         grid.innerHTML = "";
 
         posts.forEach((post) => {
+          console.log("Creating post:", post.title);
           const postElement = createBlogPostElement(post);
           grid.appendChild(postElement);
+        });
+
+        console.log("Blog posts loaded successfully");
+      }
+
+      function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
         });
       }
 
@@ -327,6 +367,11 @@
             </div>
             <h3 class="post-title">${post.title}</h3>
             <p class="post-excerpt">${post.description}</p>
+            <div class="post-tags">
+              ${post.tags
+                .map((tag) => `<span class="tag">${tag}</span>`)
+                .join("")}
+            </div>
             <a href="blog/${post.slug}.html" class="read-more">Read More</a>
           </div>
         `;
@@ -355,10 +400,25 @@
         const posts = document.querySelectorAll(".blog-post");
 
         posts.forEach((post) => {
-          if (category === "all" || post.dataset.category === category) {
+          if (category === "all") {
             post.style.display = "block";
+          } else if (category === "FNAF 1") {
+            // Check if post has FNAF 1 tag
+            const tags = post.querySelectorAll(".post-tags .tag");
+            const hasFNAF1 = Array.from(tags).some(
+              (tag) => tag.textContent === "FNAF 1"
+            );
+            post.style.display = hasFNAF1 ? "block" : "none";
+          } else if (category === "Strategy") {
+            // Check if post has Strategy tag
+            const tags = post.querySelectorAll(".post-tags .tag");
+            const hasStrategy = Array.from(tags).some(
+              (tag) => tag.textContent === "Strategy"
+            );
+            post.style.display = hasStrategy ? "block" : "none";
           } else {
-            post.style.display = "none";
+            post.style.display =
+              post.dataset.category === category ? "block" : "none";
           }
         });
       }

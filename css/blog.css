@@ -222,6 +222,29 @@
   background: #a52a2a;
 }
 
+/* Post Tags */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: #2d2d2d;
+  color: #e8e8e8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: #dc143c;
+  color: white;
+}
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
