@@ -2,6 +2,51 @@
    GAMES PAGE - CLEAN & OPTIMIZED
    ======================================== */
 
+/* Iframe Error Handling */
+.iframe-error {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.iframe-error p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+}
+
+.iframe-error ul {
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.iframe-error li {
+  margin: 0.5rem 0;
+  color: var(--text-gray);
+}
+
+.open-external-btn {
+  background: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.open-external-btn:hover {
+  background: var(--secondary-red);
+  transform: translateY(-2px);
+}
+
+/* CSS removed - using direct redirect instead of iframe */
+
 /* Why Choose Section */
 .why-choose-section {
   padding: 4rem 0;
@@ -670,3 +715,5 @@
     box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3);
   }
 }
+
+/* CSS removed - using direct redirect instead of modal */
